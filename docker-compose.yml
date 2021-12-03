@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  which-arch-container:
+    build:
+      context: .
+      dockerfile: environment/dev/Dockerfile
+    volumes:
+      - '.:/app'
+      - '/app/node_modules'
+    ports:
+      - 4651:4200
